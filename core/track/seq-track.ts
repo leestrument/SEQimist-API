@@ -9,13 +9,13 @@ export class Track {
 
     constructor(
 
+        private _isSelected = false, 
         private _mixer      = new Mixer,
         private _sequencer  = new Sequencer,
         private _playback   = new PlayBack,
         private _loop       = new TrackLoop,
         private _preset     = new TrackPreset,
         private _layout     = new TrackLayout,
-        private _isSelected = false, 
         
     ){}
 
@@ -32,6 +32,11 @@ export class Track {
     }
 
     // getter
+    public isSelected(): boolean {
+
+        return this._isSelected
+
+    }
     public getMixer(): Mixer {
 
         return this._mixer
