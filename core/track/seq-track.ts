@@ -19,6 +19,19 @@ export class Track {
         
     ){}
 
+    // setter
+    public select(): void {
+
+        this._isSelected = true
+
+    }
+    public deselect(): void {
+
+        this._isSelected = false
+
+    }
+
+    // getter
     public getMixer(): Mixer {
 
         return this._mixer
@@ -34,5 +47,5 @@ export class Track {
         return this._loop
 
     }
-
+    
 }
