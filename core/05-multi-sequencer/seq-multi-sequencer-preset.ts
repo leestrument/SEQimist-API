@@ -1,4 +1,4 @@
-export class TrackPreset {
+export class MultiSequencerPreset {
 
     constructor(
 
@@ -8,6 +8,5 @@ export class TrackPreset {
         public _isRandom   = false 
 
     ){}
-
 
 }
