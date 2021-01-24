@@ -1,5 +1,5 @@
-import { Scale } from './seq-clip-scale'
-import { Chord } from './seq-clip-chord'
+import { Scale } from './seq-clip-interval-scale'
+import { Chord } from './seq-clip-interval-chord'
 
 export class Interval {
 
