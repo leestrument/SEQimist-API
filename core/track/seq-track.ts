@@ -1,7 +1,6 @@
 import { Mixer }        from './seq-track-mixer'
 import { Sequencers }   from './seq-track-sequencers'
 import { PlayBack }     from './seq-track-playback'
-import { TrackLoop }    from './seq-track-loop'
 import { TrackPreset }  from './seq-track-preset'
 import { TrackLayout }  from './seq-track-layout'
 
@@ -13,7 +12,6 @@ export class Track {
         private _mixer      = new Mixer,
         private _sequencers = new Sequencers,
         private _playback   = new PlayBack,
-        private _loop       = new TrackLoop,
         private _preset     = new TrackPreset,
         private _layout     = new TrackLayout,
         
@@ -45,11 +43,6 @@ export class Track {
     public getPlayBack(): PlayBack {
 
         return this._playback
-
-    }
-    public getLoop(): TrackLoop {
-
-        return this._loop
 
     }
     
