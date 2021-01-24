@@ -1,4 +1,4 @@
-import { Note } from '../7_note/seq-note'
+import { Note } from '../03-note/seq-note'
 
 export class PianoRoll {
 

@@ -1,6 +1,6 @@
 import { Interval }     from './seq-clip-interval'
 import { ClipPreset }   from './seq-clip-preset'
-import { Track }        from '../4_track/seq-track'
+import { Track }        from '../06-track/seq-track'
 
 export class Clip {
 

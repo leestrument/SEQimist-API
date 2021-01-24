@@ -1,6 +1,6 @@
 import { SeqLayout }    from './seq-layout'
 import { Browser }      from './seq-browser'
-import { Timeline }     from '../2_timeline/seq-timline'
+import { Timeline }     from '../08-timeline/seq-timline'
 
 export class Seq {
 

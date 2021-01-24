@@ -1,6 +1,6 @@
 import { PitchBend }        from './seq-note-pitchBend'
 import { NoteRandomizer }   from './seq-note-randomizer'
-import { ParticleSystem }   from '../8_particleSystem/seq-particle-system'
+import { ParticleSystem }   from '../02-particle-system/seq-particle-system'
 
 export class Note {
 
