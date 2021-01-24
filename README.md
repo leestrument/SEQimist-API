@@ -1,4 +1,4 @@
 # SEQimist-API
 Sequencer API written in Typescript
 
-Note -> Sequencer -> Track -> Clip -> Timeline -> SEQimist
+Note -> Sequencer -> Sequencerz -> Track -> Clip -> Timeline -> SEQimist

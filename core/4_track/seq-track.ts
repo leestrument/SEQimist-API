@@ -1,4 +1,5 @@
 import { Mixer }        from './seq-track-mixer'
+import { Sequencerz }   from '../5_sequencerz/seq-sequencerz'
 import { PlayBack }     from './seq-track-playback'
 import { TrackPreset }  from './seq-track-preset'
 
@@ -8,6 +9,7 @@ export class Track {
 
         private _isSelected = false, 
         private _mixer      = new Mixer,
+        private _sequencerz = new Sequencerz,
         private _playback   = new PlayBack,
         private _preset     = new TrackPreset,
         
