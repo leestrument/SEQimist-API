@@ -1,9 +1,12 @@
+const MIXER_ACTIVE_DEF  = true
+const MIXER_SOLO_DEF    = false
+
 export class Mixer {
 
     constructor(
 
-        private _isActive   = true,
-        private _isSolo     = false,
+        private _isActive   = MIXER_ACTIVE_DEF,
+        private _isSolo     = MIXER_SOLO_DEF,
 
     ){}
 
