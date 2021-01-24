@@ -1,33 +1,33 @@
 import { VelocityCurve }    from './seq-particle-system-velocity-curve'
 import { Particle }         from '../01-particle/seq-particle'
 
-export const SEQ_PARTICLE_COUNT_MIN = 1
-export const SEQ_PARTICLE_COUNT_MAX = 32
+export const SEQ_VISIBLE_PARTICLE_COUNT_MIN = 1
+export const SEQ_VISIBLE_PARTICLE_COUNT_MAX = 32
 
 export class ParticleSystem {
 
     constructor(
 
-        private _particleCount  = SEQ_PARTICLE_COUNT_MIN,
-        private _velocityCurve  = new VelocityCurve,
-        private _particles      = Array.from({length : SEQ_PARTICLE_COUNT_MAX}, () => new Particle),
+        private _visibleParticleCount   = SEQ_VISIBLE_PARTICLE_COUNT_MIN,
+        private _velocityCurve          = new VelocityCurve,
+        private _particles              = Array.from({length : SEQ_VISIBLE_PARTICLE_COUNT_MAX}, () => new Particle),
 
     ){}
 
     // setter
-    public setParticleCount(particleCount: number): void {
+    public setVisibleParticleCount(visibleParticleCount: number): void {
 
-        this._particleCount = particleCount
+        this._visibleParticleCount = visibleParticleCount
 
     }
-    public increaseParticleCount(): void {
+    public increaseVisibleParticleCount(): void {
 
-        if (this._particleCount < SEQ_PARTICLE_COUNT_MAX) this._particleCount++
+        if (this._visibleParticleCount < SEQ_VISIBLE_PARTICLE_COUNT_MAX) this._visibleParticleCount
 
     }
     public decreaseParticleCount(): void {
 
-        if (this._particleCount > SEQ_PARTICLE_COUNT_MIN) this._particleCount--
+        if (this._visibleParticleCount > SEQ_VISIBLE_PARTICLE_COUNT_MIN) this._visibleParticleCount--
 
     }
 
