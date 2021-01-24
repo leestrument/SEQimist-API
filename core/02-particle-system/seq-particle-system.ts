@@ -4,9 +4,8 @@ export class ParticleSystem {
 
     constructor(
 
-        private _visibleParticleCount   = 1,
-        private _velocityCurve          = 'linear',
-        private _particles              = Array.from({length : 16}, () => new Particle),
+        private _particleCount  = 1,
+        private _particles      = Array.from({length : 16}, () => new Particle),
 
     ){}
 
