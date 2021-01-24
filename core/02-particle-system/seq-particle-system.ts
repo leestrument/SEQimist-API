@@ -12,4 +12,21 @@ export class ParticleSystem {
 
     ){}
 
+    // setter
+    public setParticleCount(particleCount: number): void {
+
+        this._particleCount = particleCount
+
+    }
+    public increaseParticleCount(): void {
+
+        if (this._particleCount < SEQ_PARTICLE_COUNT_MAX) this._particleCount++
+
+    }
+    public decreaseParticleCount(): void {
+
+        if (this._particleCount > SEQ_PARTICLE_COUNT_MIN) this._particleCount--
+
+    }
+
 }
