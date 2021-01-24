@@ -29,5 +29,10 @@ export class Track {
         return this._playback
 
     }
+    public getLoop(): TrackLoop {
+
+        return this._loop
+
+    }
 
 }
