@@ -1,6 +1,6 @@
 import { Note } from '../note/seq-note'
 
-export class Sequencer {
+export class Sequencers {
 
     constructor(
 
