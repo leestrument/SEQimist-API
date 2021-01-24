@@ -1,5 +1,11 @@
+import { Note } from '../6_note/seq-note'
+
 export class StepSequencer {
 
-    constructor(){}
+    constructor(
+
+        private _steps : { [id: string] : Note }
+
+    ){}
 
 }
