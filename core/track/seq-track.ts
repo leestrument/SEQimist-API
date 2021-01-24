@@ -19,4 +19,10 @@ export class Track {
         
     ){}
 
+    public getMixer() {
+
+        return this._mixer
+
+    }
+
 }
