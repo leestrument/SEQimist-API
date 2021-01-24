@@ -1,6 +1,6 @@
 import { Mixer }            from './seq-track-mixer'
 import { PlayBack }         from './seq-track-playback'
-import { MultiSequencer }   from '../05-multi-sequencer/seq-multi-sequencer'
+import { MultiSequencer }   from '../05-multiSequencer/seq-multiSequencer'
 
 export class Track {
 

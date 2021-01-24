@@ -1,6 +1,6 @@
 import { PianoRoll }            from '../04-sequencer/seq-piano-roll'
 import { StepSequencer }        from '../04-sequencer/seq-step-sequencer'
-import { MultiSequencerPreset } from './seq-multi-sequencer-preset'
+import { MultiSequencerPreset } from './seq-multiSequencer-preset'
 
 export class MultiSequencer {
 
