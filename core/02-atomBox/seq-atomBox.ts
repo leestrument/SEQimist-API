@@ -22,7 +22,7 @@ export class AtomBox {
     }
     public increaseVisibleAtomCount(): void {
 
-        if (this._visibleAtomCount < SEQ_VISIBLE_ATOM_COUNT_MAX) this._visibleAtomCount
+        if (this._visibleAtomCount < SEQ_VISIBLE_ATOM_COUNT_MAX) this._visibleAtomCount++
 
     }
     public decreaseVisibleAtomCount(): void {
