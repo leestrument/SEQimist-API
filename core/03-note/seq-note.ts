@@ -9,7 +9,7 @@ export class Note {
         private _start          : number,
         private _duration       : number,
         private _isSelected     = false, 
-        private _isMuted        = false,
+        private _isActive       = true,
         private _pitchBend      = new PitchBend, 
         private _randomizer     = new NoteRandomizer,
         private _particleSystem = new ParticleSystem,
