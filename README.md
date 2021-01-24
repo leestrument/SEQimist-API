@@ -1,2 +1,2 @@
 # SEQimist-API
-Sequencer API written in Typescript!
+Sequencer API written in Typescript!!
