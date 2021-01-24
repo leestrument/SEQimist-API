@@ -1,7 +1,6 @@
 import { Mixer }        from './seq-track-mixer'
 import { PlayBack }     from './seq-track-playback'
 import { TrackPreset }  from './seq-track-preset'
-import { TrackLayout }  from './seq-track-layout'
 
 export class Track {
 
@@ -11,7 +10,6 @@ export class Track {
         private _mixer      = new Mixer,
         private _playback   = new PlayBack,
         private _preset     = new TrackPreset,
-        private _layout     = new TrackLayout,
         
     ){}
 
