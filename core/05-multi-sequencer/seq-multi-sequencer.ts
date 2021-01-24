@@ -6,7 +6,6 @@ export class MultiSequencer {
 
     constructor(
 
-
         private _pianoRoll      = new PianoRoll,
         private _stepSequencer  = new StepSequencer,
         private _preset         = new MultiSequencerPreset,
