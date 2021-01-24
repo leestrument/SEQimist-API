@@ -10,8 +10,8 @@ export class Track {
         private _isSelected     = false, 
         private _mixer          = new Mixer,
         private _playback       = new PlayBack,
-        private _preset         = new TrackPreset,
         private _multiSequencer = new MultiSequencer,
+        private _preset         = new TrackPreset,
         
     ){}
 
@@ -41,6 +41,11 @@ export class Track {
     public getPlayBack(): PlayBack {
 
         return this._playback
+
+    }
+    public getMultiSequencer(): MultiSequencer {
+
+        return this._multiSequencer
 
     }
     
