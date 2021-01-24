@@ -7,8 +7,8 @@ export class Timeline {
 
     constructor(
 
-        private _loop = new TimelineLoop,
-        private _clips = Array.from({length : SEQ_CLIP_COUNT_DEF }, () => new Clip)
+        private _loop   = new TimelineLoop,
+        private _clips  = Array.from({length : SEQ_CLIP_COUNT_DEF }, () => new Clip)
 
     ){}
 
