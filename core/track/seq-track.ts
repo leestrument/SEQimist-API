@@ -19,9 +19,14 @@ export class Track {
         
     ){}
 
-    public getMixer() {
+    public getMixer(): Mixer {
 
         return this._mixer
+
+    }
+    public getPlayBack(): PlayBack {
+
+        return this._playback
 
     }
 
