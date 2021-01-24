@@ -1,7 +1,7 @@
 import { Particle } from '../01-particle/seq-particle'
 
 export const SEQ_PARTICLE_COUNT_MIN = 1
-export const SEQ_PARTICLE_COUNT_MAX = 16
+export const SEQ_PARTICLE_COUNT_MAX = 32
 
 export class ParticleSystem {
 
