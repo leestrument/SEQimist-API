@@ -1,6 +1,6 @@
-import { LeeRange }             from '../../util/lee-range'
-import { VelocityCurveType }    from './seq-atombox-velocityCurve-type'
+import { LeeRange } from '../../util/lee-range'
 
+export enum VelocityCurveType { Up, Down, Fixed, Random }
 export const SEQ_VELOCITY_CURVE_MIN = 1
 export const SEQ_VELOCITY_CURVE_MAX = 127
 
