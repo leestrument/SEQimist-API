@@ -24,7 +24,17 @@ export class Particle {
         this._gate = gate
 
     }
+    public randomizeVelocity(): void {
 
+        this._velocity = Math.floor(Math.random() * SEQ_PARTICLE_VELOCITY_MAX) + SEQ_PARTICLE_VELOCITY_MIN
+
+    }
+    public randomizeGate(): void {
+
+        this._gate = Math.random()
+
+    }
+    
     // getter
     public getVelocity(): number {
 
