@@ -1,4 +1,3 @@
-import { PitchBend }        from './seq-note-pitchBend'
 import { NoteRandomizer }   from './seq-note-randomizer'
 import { AtomBox }          from '../02-atomBox/seq-atomBox'
 
@@ -13,7 +12,6 @@ export class Note {
         private _duration       : number,
         private _isSelected     = SEQ_NOTE_IS_SELECTED_DEF, 
         private _isActive       = SEQ_NOTE_IS_ACTIVE_DEF,
-        private _pitchBend      = new PitchBend, 
         private _randomizer     = new NoteRandomizer,
         private _atomBox        = new AtomBox,
 
