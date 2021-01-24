@@ -1,6 +1,6 @@
 import { PitchBend }        from './seq-note-pitchBend'
 import { NoteRandomizer }   from './seq-note-randomizer'
-import { ParticleSystem }   from '../02-particle-system/seq-particle-system'
+import { AtomBox }          from '../02-atomBox/seq-atomBox'
 
 const SEQ_NOTE_IS_SELECTED_DEF  = false
 const SEQ_NOTE_IS_ACTIVE_DEF    = true
@@ -15,7 +15,7 @@ export class Note {
         private _isActive       = SEQ_NOTE_IS_ACTIVE_DEF,
         private _pitchBend      = new PitchBend, 
         private _randomizer     = new NoteRandomizer,
-        private _particleSystem = new ParticleSystem,
+        private _atomBox        = new AtomBox,
 
     ){}
 

@@ -1,15 +1,15 @@
-export const SEQ_PARTICLE_VELOCITY_MIN = 1 
-export const SEQ_PARTICLE_VELOCITY_MAX = 127
-export const SEQ_PARTICLE_VELOCITY_DEF = 64
-export const SEQ_PARTICLE_GATE_MIN = 0
-export const SEQ_PARTICLE_GATE_MAX = 1
+export const SEQ_ATOM_VELOCITY_MIN = 1 
+export const SEQ_ATOM_VELOCITY_MAX = 127
+export const SEQ_ATOM_VELOCITY_DEF = 64
+export const SEQ_ATOM_GATE_MIN = 0
+export const SEQ_ATOM_GATE_MAX = 1
 
-export class Particle {
+export class Atom {
 
     constructor(
 
-        private _velocity   = SEQ_PARTICLE_VELOCITY_DEF,
-        private _gate       = SEQ_PARTICLE_GATE_MAX,
+        private _velocity   = SEQ_ATOM_VELOCITY_DEF,
+        private _gate       = SEQ_ATOM_GATE_MAX,
 
     ){}
 
@@ -26,7 +26,7 @@ export class Particle {
     }
     public randomizeVelocity(): void {
 
-        this._velocity = Math.floor(Math.random() * SEQ_PARTICLE_VELOCITY_MAX) + SEQ_PARTICLE_VELOCITY_MIN
+        this._velocity = Math.floor(Math.random() * SEQ_ATOM_VELOCITY_MAX) + SEQ_ATOM_VELOCITY_MIN
 
     }
     public randomizeGate(): void {
