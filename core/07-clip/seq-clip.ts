@@ -8,9 +8,9 @@ export class Clip {
 
         private _isSelected         = false,
         private _color              = 0,
-        private _trackCount         = 8,
         private _interval           = new Interval,
         private _preset             = new ClipPreset,
+        private _visibleTrackCount  = 8,
         private _tracks             = Array.from({length : 64}, () => new Track),
 
     ){}
