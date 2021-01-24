@@ -1,5 +1,5 @@
 import { TimelineLoop } from './seq-timeline-loop'
-import { Clip }         from '../clip/seq-clip'
+import { Clip }         from '../3_clip/seq-clip'
 
 const SEQ_CLIP_COUNT_DEF = 8
 
