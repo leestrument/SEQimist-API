@@ -10,8 +10,8 @@ export class Track {
 
         private _isSelected = false, 
         private _mixer      = new Mixer,
-        private _sequencers = new Sequencers,
         private _playback   = new PlayBack,
+        private _sequencers = new Sequencers,
         private _preset     = new TrackPreset,
         private _layout     = new TrackLayout,
         
