@@ -19,36 +19,30 @@ export class AtomBox {
     public setVisibleAtomCount(visibleAtomCount: number): void {
 
         this._visibleAtomCount = visibleAtomCount
+        
+        if (this._curve.isActive()) this.updateAtomsVelocityByCurve()
 
     }
     public increaseVisibleAtomCount(): void {
 
-        if (this._visibleAtomCount < SEQ_VISIBLE_ATOM_COUNT_MAX) this._visibleAtomCount++
+        if (this._visibleAtomCount < SEQ_VISIBLE_ATOM_COUNT_MAX) {
+
+            this._visibleAtomCount++
+
+            if (this._curve.isActive()) this.updateAtomsVelocityByCurve()
+
+        } 
 
     }
     public decreaseVisibleAtomCount(): void {
 
-        if (this._visibleAtomCount > SEQ_VISIBLE_ATOM_COUNT_MIN) this._visibleAtomCount--
+        if (this._visibleAtomCount > SEQ_VISIBLE_ATOM_COUNT_MIN) {
 
-    }
-    public setAtomsVelocityUp(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
+            this._visibleAtomCount--
 
-        LeeArray.up(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+            if (this._curve.isActive()) this.updateAtomsVelocityByCurve()
 
-    }
-    public setAtomsVelocityDown(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
-
-        LeeArray.down(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
-
-    }
-    public setAtomsVelocityRandom(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
-
-        LeeArray.random(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
-
-    }
-    public setAtomsVelocityFixed(velocityToFix: number): void {
-
-        LeeArray.fill(this._visibleAtomCount, velocityToFix).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+        }
 
     }
     public activeCurve(): void { 
@@ -82,6 +76,26 @@ export class AtomBox {
     }
 
     // private setter
+    private setAtomsVelocityUp(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
+
+        LeeArray.up(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+
+    }
+    private setAtomsVelocityDown(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
+
+        LeeArray.down(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+
+    }
+    private setAtomsVelocityRandom(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
+
+        LeeArray.random(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+
+    }
+    private setAtomsVelocityFixed(velocityToFix: number): void {
+
+        LeeArray.fill(this._visibleAtomCount, velocityToFix).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+
+    }
     private updateAtomsVelocityByCurve(): void {
 
         const curveType = this._curve.getType()
