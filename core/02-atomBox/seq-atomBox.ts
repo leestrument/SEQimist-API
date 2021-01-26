@@ -32,4 +32,41 @@ export class AtomBox {
 
     }
 
+    public setAtomsVelocityUp(): void {
+
+        LeeArray.up(this._visibleAtomCount, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX).forEach((velocity, index) => {
+
+            this._atoms[index].setVelocity(velocity)
+    
+        })
+
+    }
+    public setAtomsVelocityDown(): void {
+
+        LeeArray.down(this._visibleAtomCount, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX).forEach((velocity, index) => {
+
+            this._atoms[index].setVelocity(velocity)
+    
+        })
+
+    }
+    public setAtomsVelocityRandom(): void {
+
+        LeeArray.random(this._visibleAtomCount, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX).forEach((velocity, index) => {
+
+            this._atoms[index].setVelocity(velocity)
+    
+        })
+
+    }
+    public setAtomsVelocityFixed(velocityToFix: number): void {
+
+        LeeArray.fill(this._visibleAtomCount, velocityToFix).forEach((velocity, index) => {
+
+            this._atoms[index].setVelocity(velocity)
+    
+        })
+
+    }
+
 }
