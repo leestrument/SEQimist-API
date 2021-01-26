@@ -1,8 +1,7 @@
 import { LeeRange } from '../../util/lee-range'
+import { SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX } from '../01-atom/seq-atom'
 
 export enum     VelocityCurveType       { Up, Down, Random, Fixed }
-export const    SEQ_VELOCITY_CURVE_MIN  = 1
-export const    SEQ_VELOCITY_CURVE_MAX  = 127
 
 export class VelocityCurve extends LeeRange {
 
@@ -10,7 +9,7 @@ export class VelocityCurve extends LeeRange {
 
         private _type = VelocityCurveType.Up
 
-    ){ super(SEQ_VELOCITY_CURVE_MIN, SEQ_VELOCITY_CURVE_MAX) }
+    ){ super(SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX) }
 
     // setter
     public setType(type: VelocityCurveType): void {
