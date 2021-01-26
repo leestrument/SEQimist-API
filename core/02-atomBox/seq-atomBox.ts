@@ -1,6 +1,6 @@
-import { VelocityCurve }                                        from './seq-atombox-velocityCurve'
-import { Atom, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX }   from '../01-atom/seq-atom'
-import { LeeArray }                                             from '../../util/lee-array'
+import { VelocityCurve } from './seq-atombox-velocityCurve'
+import { Atom, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX } from '../01-atom/seq-atom'
+import LeeArray from '../../util/lee-array'
 
 export const SEQ_VISIBLE_ATOM_COUNT_MIN = 1
 export const SEQ_VISIBLE_ATOM_COUNT_MAX = 32
