@@ -31,14 +31,5 @@ export class AtomBox {
         if (this._visibleAtomCount > SEQ_VISIBLE_ATOM_COUNT_MIN) this._visibleAtomCount--
 
     }
-    public setAtomsVelocityUp(): void {
-
-        LeeArray.increase(this._visibleAtomCount, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX).forEach((velocity, index) => {
-
-            this._atoms[index].setVelocity(velocity)
-
-        })
-
-    }
 
 }
