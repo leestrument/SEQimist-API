@@ -57,7 +57,7 @@ export class AtomBox {
         this.updateAtomsVelocityByCurve()
     
     }
-    public deactiveVelocityCurve(): void { 
+    public deactiveCurve(): void { 
         
         this._curve.deactive() 
     
