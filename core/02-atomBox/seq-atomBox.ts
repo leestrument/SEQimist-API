@@ -32,19 +32,22 @@ export class AtomBox {
 
     }
 
-    public setAtomsVelocityUp(): void {
 
-        LeeArray.up(this._visibleAtomCount, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
 
-    }
-    public setAtomsVelocityDown(): void {
 
-        LeeArray.down(this._visibleAtomCount, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+    public setAtomsVelocityUp(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
+
+        LeeArray.up(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
 
     }
-    public setAtomsVelocityRandom(): void {
+    public setAtomsVelocityDown(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
 
-        LeeArray.random(this._visibleAtomCount, SEQ_ATOM_VELOCITY_MIN, SEQ_ATOM_VELOCITY_MAX).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+        LeeArray.down(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
+
+    }
+    public setAtomsVelocityRandom(velocityMin = SEQ_ATOM_VELOCITY_MIN, velocityMax = SEQ_ATOM_VELOCITY_MAX): void {
+
+        LeeArray.random(this._visibleAtomCount, velocityMin, velocityMax).forEach((velocity, index) => this._atoms[index].setVelocity(velocity))
 
     }
     public setAtomsVelocityFixed(velocityToFix: number): void {
