@@ -24,16 +24,6 @@ export class Atom {
         this._gate = gate
 
     }
-    public randomizeVelocity(): void {
-
-        this._velocity = Math.floor(Math.random() * SEQ_ATOM_VELOCITY_MAX) + SEQ_ATOM_VELOCITY_MIN
-
-    }
-    public randomizeGate(): void {
-
-        this._gate = Math.random()
-
-    }
     
     // getter
     public getVelocity(): number {
